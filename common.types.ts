@@ -32,7 +32,7 @@ export interface UserProfile {
     description: string | null;
     avatarUrl: string;
     githubUrl: string | null;
-    linkedinUrl: string | null;
+    linkedInUrl: string | null;
     projects: {
         edges: { node: ProjectInterface }[];
         pageInfo: {
@@ -44,6 +44,7 @@ export interface UserProfile {
     };
 }
 
+// Extends built in session with data provided by google (in this project)
 export interface SessionInterface extends Session {
     user: User & {
         id: string;
